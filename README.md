@@ -21,13 +21,19 @@ You can start training of YOLOv4 for license plate detection after successful bu
 In *TrainDarknet\cfg\yolov4-class1.cfg* following changes were made to train YOLOv4.
 
 batch=64
+
 subdivisions=64
+
 width=640
+
 height=640
+
 max_batches = 2000 # classes*2000
+
 steps=1600,1800
 
 Change [filters=255] to filters=(classes + 5)x3 in the 3 [convolutional] before each [yolo] layer. In our case its 18
+
 filters=18
 
 Use this command for training:
